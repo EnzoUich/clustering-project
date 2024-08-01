@@ -24,8 +24,12 @@ def main() -> None:
     kmeans.fit(arr)
     new_cluster = kmeans.labels_
 
-    # Show confusion matrix
+    # Compute metrics
+    accuracy = metrics.accuracy_score(original_cluster, new_cluster)
+    print(f"Accuracy: {accuracy:.2%}")
     confusion_matrix = metrics.confusion_matrix(original_cluster, new_cluster)
+
+    # Show confusion matrix
     cm_display = metrics.ConfusionMatrixDisplay(
         confusion_matrix=confusion_matrix, display_labels=[0, 1, 2, 3]
     )
