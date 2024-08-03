@@ -4,6 +4,13 @@
 
 > Instructions are for Linux
 
+### Put data in 'data' folder named 'data.csv'
+
+```bash
+mkdir data
+touch data/data.csv
+```
+
 ### Optional: Create virtual environment
 
 ```bash
